@@ -16,6 +16,19 @@ This is for Ubuntu 14 only ;)
 <br>rm /etc/nginx/sites-enabled/default
 <br>cp etc/nginx/sites-enabled/kibana /etc/nginx/sites-enabled/
 <br>cp etc/logstash/conf.d/logstash.conf /etc/logstash/conf.d/logstash.conf
+<br>
+cd /opt/logstash/vendor/geoip/
+<br>
+wget http://download.maxmind.com/download/geoip/database/asnum/GeoIPASNum.dat.gz
+<br>
+gunzip GeoIPASNum.dat.gz
+<br>
+wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz
+<br>
+gunzip GeoLiteCity.dat.gz
+<br>
+/opt/logstash/bin/plugin update
+<br>
 <br>service nginx restart
 <br>service elasticsearch restart
 <br>service logstash restart
@@ -30,5 +43,4 @@ This is for Ubuntu 14 only ;)
 <br><br>
 Start sending Netflow data v5 on port 5556 to this box and open up the browser!
 
-http://download.maxmind.com/download/geoip/database/asnum/GeoIPASNum.dat.gz
-http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz
+
