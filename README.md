@@ -27,7 +27,7 @@ ENVIROMENT=VPC<br>
 <br>sudo apt-get update
 <br>sudo apt-get install logstash
 <br>cd $ENVIROMENT
-``<br>DIR=`pwd```
+<br>``DIR=`pwd```
 <br>rm /etc/nginx/sites-enabled/default
 <br>cp etc/nginx/sites-enabled/kibana /etc/nginx/sites-enabled/
 <br>cp etc/logstash/conf.d/logstash.conf /etc/logstash/conf.d/logstash.conf
