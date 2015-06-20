@@ -1,6 +1,6 @@
 # What is it?
 
-ELK setup to take in netflow data and give you searchable dashboards based on any netflow information, as netflow delivers destination ports ect at layer 4 the logstash agent will gsub each port to what is defined in RFC for that part. Though both resulsts are still visible in the dashboards.
+ELK setup to take in flow data and give you searchable dashboards based on any current flow information, as all current flow information being used here delivers destination ports ect at layer 4 the logstash agent will gsub each port to what is defined in RFC for that part. Though both resulsts are still visible in the dashboards.
 <br><br>
 Reverse DNS has also been enabled for src and dst, if you scroll to the bottom of the dashboard in your brwose you will seee the searchable fields on your left!
 <br><br>
@@ -14,7 +14,7 @@ This is for Ubuntu 14 only ;)
 <br> The next item is critical as we will be copying configs from git to the server we need to make sure they are right!
 <br>ENVIROMENT=Netflow<br>
 ENVIROMENT=VPC<br>
-<b>Only choose ne of the above</b><br>
+<b>Only choose one of the above</b><br>
 <br>sudo add-apt-repository -y ppa:webupd8team/java
 <br>sudo apt-get update
 <br>sudo apt-get -y install oracle-java8-installer
@@ -55,7 +55,11 @@ gunzip GeoLiteCity.dat.gz
 <br>cp $DIR/var/www/kibana/app/dashboards/default.json app/dashboards/default.json
 <br><br>
 # All installed!
-Sit back and wait for the magic, if you do not see anything come up open up /etc/logstash/conf.d/logstash.conf and goto the bottom and uncomment out the line: stdout { codec => rubydebug }<br>
+Sit back and wait for the magic, if you do not see anything come up open up /etc/logstash/conf.d/logstash.conf and goto the bottom and uncomment out the line: 
+```
+stdout { codec => rubydebug }
+```
+<br>
 
 Then stop logstash and cd /opt/logstash/bin;./logstash -f /etc/logstash/conf.d/logstash.conf --verbose --debug and look for any possible config problems there.
 
