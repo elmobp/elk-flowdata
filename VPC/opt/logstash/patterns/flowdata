@@ -1,0 +1,2 @@
+IFACE (?:[\w._/%-]+)
+FLOWDATA %{INT:flowversion} %{INT:account} %{IFACE:interface} %{IP:srcip} %{IP:dstip} %{INT:srcport} %{INT:dstport} %{INT:proto} %{INT:packets} %{INT:bytes} %{INT:timestart} %{INT:timeend} %{WORD:action} %{WORD:status}
