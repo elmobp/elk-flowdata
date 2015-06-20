@@ -28,7 +28,6 @@ wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz
 gunzip GeoLiteCity.dat.gz
 <br>
 /opt/logstash/bin/plugin update
-<br>
 <br>service nginx restart
 <br>service elasticsearch restart
 <br>service logstash restart
@@ -41,6 +40,7 @@ gunzip GeoLiteCity.dat.gz
 <br>cp $PWD/var/www/kibana/config.js .
 <br>cp $PWD/var/www/kibana/app/dashboards/default.json app/dashboards/default.json
 <br><br>
+# All installed!
 Start sending Netflow data v5 on port 5556 to this box and open up the browser!
 
 
