@@ -5,7 +5,7 @@ ELK setup to take in netflow data and give you searchable dashboards based on an
 Reverse DNS has also been enabled for src and dst, if you scroll to the bottom of the dashboard in your brwose you will seee the searchable fields on your left!
 
 # Installing<br>
-<img src="http://s17.postimg.org/ahm4nejpa/Screen_Shot_2015_06_21_at_6_42_15_am.jpg"><br>
+[![netflow](https://github.com/mbakerbp/elk-flowdata/raw/master/Netflow/screenshots/dashboard.png)<br>
 This is for Ubuntu 14 only ;)
 <br>
 <br><b>Lots of pre req command first</b>
