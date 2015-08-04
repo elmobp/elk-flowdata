@@ -15,6 +15,9 @@ This is for Ubuntu 14 only ;)
 <br>ENVIROMENT=Netflow<br>
 ENVIROMENT=VPC<br>
 <b>Only choose one of the above</b><br>
+<br>wget https://github.com/mbakerbp/elk-flowdata/archive/master.zip
+<br> unzip master.zip
+<br> cd elk-flowdata-master/
 <br>sudo add-apt-repository -y ppa:webupd8team/java
 <br>sudo apt-get update
 <br>sudo apt-get -y install oracle-java8-installer
